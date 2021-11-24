@@ -1,0 +1,51 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "");
+
+    cout << "[</>] Калькулятор" << endl << endl;
+
+    cout << "[+] Сложение" << endl;
+    cout << "[-] Вычитание" << endl;
+    cout << "[*] Умножение" << endl;
+    cout << "[/] Деление" << endl;
+    cout << "[pow] Возведение в степень" << endl << endl;
+
+    cout << "[</>] Введите операцию: ";
+
+    string operation;
+    cin >> operation;
+
+    cout << "[</>] Введите первое число: ";
+    float num1;
+    cin >> num1;
+    cout << "[</>] Введите второе число: ";
+    float num2;
+    cin >> num2;
+    
+    if (operation == "+") {
+        cout << "Результат: " << num1 << " + " << num2 << " = " << num1 + num2;
+    }
+    else if (operation == "-") {
+        cout << "Результат: " << num1 << " - " << num2 << " = " << num1 - num2;
+    }
+    else if (operation == "*") {
+        cout << "Результат: " << num1 << " * " << num2 << " = " << num1 * num2;
+    }
+    else if (operation == "/") {
+        cout << "Результат: " << num1 << " / " << num2 << " = " << num1 / num2;
+    }
+    else if (operation == "pow") {
+        cout << "Результат: " << num1 << " в степени " << num2 << " = " << pow(num1, num2);
+    }
+    else {
+        cout << "Ошибка выбора операции";
+    }
+
+    int _; cin >> _;
+    return 0;
+}
